@@ -1,0 +1,49 @@
+model:
+  name: "1D-CNN"
+  input_shape: [71, 13]
+  num_classes: 9
+
+classes:
+  - "no"
+  - "off"
+  - "on"
+  - "one"
+  - "stop"
+  - "three"
+  - "two"
+  - "unknown"
+  - "yes"
+
+training:
+  epochs: 30
+  batch_size: 64
+  learning_rate: 0.001
+
+dataset:
+  feature_directory: "C:/Users/M S I/PycharmProjects/KWS/feature/mfcc_feature"
+
+  training:
+    directory: "train"
+
+  validation:
+    directory: "val"
+
+  testing:
+    directory: "test"
+
+quantization:
+  representative_samples: 100
+
+output:
+  directory: "C:/Users/M S I/PycharmProjects/KWS/Models"
+
+  keras_model: "CNN1D_keyword_spotting.keras"
+  fp32_tflite: "CNN1D_keyword_spotting_fp32.tflite"
+  int8_tflite: "CNN1D_keyword_spotting_int8.tflite"
+
+  label_mapping: "CNN1D_label_mapping.json"
+  normalization_parameters: "CNN1D_normalization.npz"
+  training_history: "CNN1D_training_history.json"
+  evaluation_results: "CNN1D_evaluation_results.json"
+
+random_seed: 42

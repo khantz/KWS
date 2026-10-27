@@ -1,0 +1,30 @@
+dataset:
+  input_directory: "C:/Users/M S I/PycharmProjects/KWS/dataset/after_preprocessed"
+  output_directory: "C:/Users/M S I/PycharmProjects/KWS/feature/mel_spectrogram"
+
+mel_spectrogram:
+  sample_rate: 16000
+  duration_seconds: 1.0
+
+  pre_emphasis:
+    enabled: false
+    coefficient: 0.97
+
+  frame:
+    duration_ms: 20
+    overlap_ratio: 0.30
+
+  window:
+    type: "hamming"
+
+  fft:
+    size: 512
+
+  mel_filter:
+    number_of_filters: 40
+    minimum_frequency: 20
+    maximum_frequency: 8000
+
+  log:
+    base: "natural"
+    epsilon: 1.0e-10

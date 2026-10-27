@@ -1,0 +1,27 @@
+audio_augmentation:
+  train_directory: C:\Users\M S I\PycharmProjects\KWS\dataset\processed\train
+
+  background_noise_directory: C:\Users\M S I\PycharmProjects\KWS\dataset\raw\noise
+
+  target_sample_rate: 16000
+  target_duration_seconds: 1.0
+
+  target_class_count: 4000
+
+  background_noise:
+    enabled: true
+    snr_levels_db:
+      - 10
+      - 15
+      - 20
+
+  time_shift:
+    enabled: true
+    max_shift_seconds: 0.2
+
+  gain:
+    enabled: true
+    min_gain: 0.5
+    max_gain: 1.5
+
+  random_seed: 42

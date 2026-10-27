@@ -1,0 +1,7 @@
+[
+    {
+        "model": "CNN1D",
+        "format": "FP32",
+        "model_path": "C:\\Users\\M S I\\PycharmProjects\\KWS\\Models\\CNN1D_keyword_spotting_fp32.tflite",
+        "input_shape": [
+            

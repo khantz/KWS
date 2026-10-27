@@ -1,0 +1,7 @@
+audio_preprocessing:
+  input_directory: C:\Users\M S I\PycharmProjects\KWS\dataset\after_splited
+  output_directory: C:\Users\M S I\PycharmProjects\KWS\dataset\after_preprocessed
+
+  target_sample_rate: 16000
+  target_channels: 1
+  target_duration_seconds: 1.0

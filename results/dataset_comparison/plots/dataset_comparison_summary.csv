@@ -1,0 +1,5 @@
+split,raw_files,preprocessed_files,removed,retention_%
+train,36000,36000,0,100.0
+validation,3592,3592,0,100.0
+test,3599,3599,0,100.0
+TOTAL,43191,43191,0,100.0

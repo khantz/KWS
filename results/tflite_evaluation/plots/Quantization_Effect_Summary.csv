@@ -1,0 +1,4 @@
+Architecture,Size reduction (%),Accuracy change (pp)
+CNN1D,65.4993,0.0000
+DS-CNN,46.8255,-0.0834
+MobileNetV2,60.3216,-30.7585

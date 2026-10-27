@@ -1,0 +1,10 @@
+dataset:
+  source_dir: C:\Users\M S I\PycharmProjects\KWS\dataset\raw\speech_commands
+  output_dir: C:\Users\M S I\PycharmProjects\KWS\dataset\processed
+
+  split:
+    train_ratio: 0.8
+    val_ratio: 0.1
+    test_ratio: 0.1
+
+  seed: 42

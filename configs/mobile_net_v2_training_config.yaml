@@ -1,0 +1,56 @@
+model:
+  name: "MobileNetV2"
+  input_shape: [96, 96, 3]
+  num_classes: 9
+
+classes:
+  - "no"
+  - "off"
+  - "on"
+  - "one"
+  - "stop"
+  - "three"
+  - "two"
+  - "unknown"
+  - "yes"
+
+training:
+  epochs: 30
+  batch_size: 64
+  learning_rate: 0.001
+
+dataset:
+  feature_directory: "C:/Users/M S I/PycharmProjects/KWS/feature/mel_spectrogram"
+
+  training:
+    directory: "train"
+
+  validation:
+    directory: "val"
+
+  testing:
+    directory: "test"
+
+transfer_learning:
+  enabled: true
+  weights: "imagenet"
+  include_top: false
+  alpha: 0.35
+  freeze_base: true
+
+quantization:
+  representative_samples: 100
+
+output:
+  directory: "C:/Users/M S I/PycharmProjects/KWS/Models"
+
+  keras_model: "MobileNetV2_keyword_spotting.keras"
+  fp32_tflite: "MobileNetV2_keyword_spotting_fp32.tflite"
+  int8_tflite: "MobileNetV2_keyword_spotting_int8.tflite"
+
+  label_mapping: "MobileNetV2_label_mapping.json"
+  normalization_parameters: "MobileNetV2_normalization.npz"
+  training_history: "MobileNetV2_training_history.json"
+  evaluation_results: "MobileNetV2_evaluation_results.json"
+
+random_seed: 42

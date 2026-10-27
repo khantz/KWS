@@ -1,0 +1,10 @@
+audio_validation:
+  input_directory: C:\Users\M S I\PycharmProjects\KWS\dataset\after_preprocessed
+  report_path: C:/Users/M S I/PycharmProjects/KWS/result_png/csv/audio_validation_report_after_preprocessed.csv
+
+  target_sample_rate: 16000
+  target_channels: 1
+  target_duration_seconds: 1.0
+
+  low_rms_threshold: 0.001
+  clipping_threshold: 0.999

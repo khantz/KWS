@@ -1,0 +1,36 @@
+mfcc_extraction:
+  input_directory: C:\Users\M S I\PycharmProjects\KWS\dataset\after_preprocessed
+  output_directory: C:\Users\M S I\PycharmProjects\KWS\feature\mfcc_feature
+
+  sample_rate: 16000
+  duration_seconds: 1.0
+
+  pre_emphasis:
+    enabled: true
+    coefficient: 0.97
+
+  frame:
+    duration_ms: 20
+    overlap_ratio: 0.30
+
+  window:
+    type: "hamming"
+
+  fft:
+    size: 512
+
+  mel_filter:
+    number_of_filters: 26
+    minimum_frequency: 20
+    maximum_frequency: 8000
+
+  log:
+    base: "natural"
+    epsilon: 1.0e-10
+
+  dct:
+    type: 2
+    normalization: "ortho"
+
+  mfcc:
+    number_of_coefficients: 13
